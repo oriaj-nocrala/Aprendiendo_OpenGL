@@ -1,0 +1,38 @@
+// Generate tasks for GLEW / GLFW project
+// Shaders are in res/shaders from the root of the project
+{
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "C/C++: g++ compilar archivo activo",
+      "command": "/usr/bin/g++",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${workspaceFolder}/src/*.cpp",
+        "${workspaceFolder}/src/vendor/stb_image/*.cpp",
+        "${workspaceFolder}/src/vendor/imgui/*.cpp",
+        "-o",
+        "${workspaceFolder}/Main",
+        "-lGLEW",
+        "-lGL",
+        "-lGLU",
+        "-lglfw",
+        "-lm",
+        "-ldl"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Tarea generada por el depurador."
+    }
+  ],
+  "version": "2.0.0"
+}
